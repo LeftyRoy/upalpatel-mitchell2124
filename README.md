@@ -27,5 +27,3 @@ files were downloaded or cloned, then for the exisiting item, open the
 scroll over Debug and click Start Without Debugging to build and run the 
 program.
 
-This is a new line.
-
