@@ -48,6 +48,7 @@ bool search(node *h[], int x);
 /**
  * @brief HashFun method
  * @param accNo
+ * @return The number gained when taking the modulus of the account number using the number 5.
  * @details The method implements the modulus operator on the account number using the number 5.
  */
 int HashFun(int accNo)
@@ -74,7 +75,7 @@ void insert(node *h[], int x, string y, float z)
 }
 
 /**
- * @brief Display method
+ * @brief display method
  * @param *h[]
  * @details
  */
@@ -97,6 +98,7 @@ void Display(node *h[])
 /**
  * @brief deposit method
  * @param *h[] depAmt num
+ * @return The amount of balance after deposit.
  * @details
  */
 float const deposit(node *h[], float depAmt, int num)
@@ -117,8 +119,9 @@ float const deposit(node *h[], float depAmt, int num)
 
 
 /**
- * @brief withdraw functions
+ * @brief withdraw method
  * @param *h[] withAmt num
+ * @return balance after withdrawal from account.
  * @details
  */
 float const withdraw(node *h[], float withAmt, int num)
@@ -184,6 +187,7 @@ float getBalance(node *h[], int num)
 /**
  * @brief search method
  * @param *h[] x
+ * @return true or false to execute a search.
  * @details
  */
 bool search(node *h[], int x)
@@ -210,11 +214,13 @@ bool search(node *h[], int x)
  */
 int main()
 {
+    // Initialzes arrays for Node pointer H, account number, name, and balance.
 	node *H[5];
 	int AcctNo[6];
 	string name[6];
 	float bal[6];
 
+    //standard initializations needed for the loops used.
 	char repeat;
 	int choice,
 		accNo,
@@ -226,6 +232,7 @@ int main()
 		tempD,
 		tempW;
 
+    //Read in from the file named "Menu.txt"
 	fstream f;
 	f.open("Menu.txt", ios::in);
 
@@ -233,6 +240,7 @@ int main()
 	{
 		H[i] = NULL;
 	}
+	
 	for (int i = 0; i < 6; i++)
 	{
 		f >> AcctNo[i] >> name[i] >> bal[i];
