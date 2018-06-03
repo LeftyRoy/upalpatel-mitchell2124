@@ -220,8 +220,8 @@ int main()
 	string name[6];
 	float bal[6];
 
-    //standard initializations needed for the loops used.
-	char repeat;
+    // Standard initializations needed for the loops used.
+	char repeat; 
 	int choice,
 		accNo,
 		length = 0;
@@ -232,15 +232,20 @@ int main()
 		tempD,
 		tempW;
 
-    //Read in from the file named "Menu.txt"
+    // Read in from the file named "Menu.txt"
 	fstream f;
 	f.open("Menu.txt", ios::in);
 
+	// Make individual array elements null.
 	for (int i = 0; i < 5; i++)
 	{
 		H[i] = NULL;
 	}
 	
+	/** For each increment read in the account number, name, and balance.
+	 * Then it inserts them into the array and increase the length by one.
+	 * Repeats until all names are read in.
+	 */
 	for (int i = 0; i < 6; i++)
 	{
 		f >> AcctNo[i] >> name[i] >> bal[i];
@@ -248,11 +253,13 @@ int main()
 		length++;
 	}
 
+	//After names are read in, this is where the user picks there choice for what to do.
 	do
 	{
 		cout << "Please enter your choice (1-4): ";
 		cin >> choice;
 
+		// displays balance of an individual.
 		if (choice == 1)
 		{
 			cout << "Enter your account number: ";
@@ -265,6 +272,8 @@ int main()
 					fixed << setprecision(2) << tempB << endl;
 			}
 		}
+
+		//Allows the user to deposit money into an account.
 		else if (choice == 2)
 		{
 			cout << "Enter your account number: ";
@@ -279,6 +288,8 @@ int main()
 					fixed << setprecision(2) << tempD << endl;
 			}
 		}
+
+		// Allows the user to withdraw money from an account.
 		else if (choice == 3)
 		{
 			cout << "Enter your account number: ";
@@ -293,6 +304,8 @@ int main()
 					fixed << setprecision(2) << tempW << endl;
 			}
 		}
+
+		//Displays all account numbers, names, and balances for each account.
 		else if (choice == 4)
 		{
 			Display(H);
@@ -304,7 +317,7 @@ int main()
 
 		cout << "\nCONTINUE (y/n)? ";
 		cin >> repeat;
-	} while (repeat == 'y');
+	} while (repeat == 'y'); //allows user to restart if wrong input is entered.
 
 	system("PAUSE");
 	return 0;
