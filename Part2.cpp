@@ -57,8 +57,8 @@ int HashFun(int accNo)
 }
 
 /**
- * @brief insert method
- * @param *h[] x y z
+ * @brief Insert method
+ * @param *h[], x, y, z
  * @details 
  */
 
@@ -75,7 +75,7 @@ void insert(node *h[], int x, string y, float z)
 }
 
 /**
- * @brief display method
+ * @brief Display method
  * @param *h[]
  * @details
  */
@@ -96,8 +96,8 @@ void Display(node *h[])
 }
 
 /**
- * @brief deposit method
- * @param *h[] depAmt num
+ * @brief Deposit method
+ * @param *h[], depAmt, num
  * @return The amount of balance after deposit.
  * @details
  */
@@ -119,8 +119,8 @@ float const deposit(node *h[], float depAmt, int num)
 
 
 /**
- * @brief withdraw method
- * @param *h[] withAmt num
+ * @brief Withdraw method
+ * @param *h[], withAmt, num
  * @return balance after withdrawal from account.
  * @details
  */
@@ -142,7 +142,7 @@ float const withdraw(node *h[], float withAmt, int num)
 
 /**
  * @brief getName method
- * @param *h[] num
+ * @param *h[], num
  * @details
  */
 string getName(node *h[], int num)
@@ -164,7 +164,7 @@ string getName(node *h[], int num)
 
 /**
  * @brief getBalance method
- * @param *h[] num
+ * @param *h[], num
  * @details
  */
 float getBalance(node *h[], int num)
@@ -185,8 +185,8 @@ float getBalance(node *h[], int num)
 }
 
 /**
- * @brief search method
- * @param *h[] x
+ * @brief Search method
+ * @param *h[], x
  * @return true or false to execute a search.
  * @details
  */
