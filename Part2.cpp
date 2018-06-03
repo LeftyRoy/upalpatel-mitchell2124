@@ -59,9 +59,8 @@ int HashFun(int accNo)
 /**
  * @brief Insert method
  * @param *h[], x, y, z
- * @details 
+ * @details This function implements using pointers. Based on the data being read from the file, store them in the Linked List using pointers.
  */
-
 void insert(node *h[], int x, string y, float z)
 {
 	int i = HashFun(x);
@@ -77,7 +76,7 @@ void insert(node *h[], int x, string y, float z)
 /**
  * @brief Display method
  * @param *h[]
- * @details
+ * @details This function will display the information stored in the Linked List.
  */
 void Display(node *h[])
 {
@@ -99,7 +98,7 @@ void Display(node *h[])
  * @brief Deposit method
  * @param *h[], depAmt, num
  * @return The amount of balance after deposit.
- * @details
+ * @details This function serves the purpose to deposit user inputed balance to a specific account, adding to the current balance that account holds.
  */
 float const deposit(node *h[], float depAmt, int num)
 {
@@ -122,7 +121,7 @@ float const deposit(node *h[], float depAmt, int num)
  * @brief Withdraw method
  * @param *h[], withAmt, num
  * @return balance after withdrawal from account.
- * @details
+ * @details This function serves the purpose to withdraw user inputed balance from a specific account, subtracting from the current balance that account holds.
  */
 float const withdraw(node *h[], float withAmt, int num)
 {
@@ -143,7 +142,7 @@ float const withdraw(node *h[], float withAmt, int num)
 /**
  * @brief getName method
  * @param *h[], num
- * @details
+ * @details This function serves the purpose of finding the name of a specific account based on the account number.
  */
 string getName(node *h[], int num)
 {
@@ -165,7 +164,7 @@ string getName(node *h[], int num)
 /**
  * @brief getBalance method
  * @param *h[], num
- * @details
+ * @details This function serves the purpose of finding the current balance an account holds based on the account number.
  */
 float getBalance(node *h[], int num)
 {
@@ -188,7 +187,7 @@ float getBalance(node *h[], int num)
  * @brief Search method
  * @param *h[], x
  * @return true or false to execute a search.
- * @details
+ * @details This function serves the purpose of error checking if an account exists based on the account number.
  */
 bool search(node *h[], int x)
 {
