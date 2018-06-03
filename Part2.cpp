@@ -253,7 +253,7 @@ int main()
 		length++;
 	}
 
-	//After names are read in, this is where the user picks there choice for what to do.
+	// After names are read in, this is where the user picks there choice for what to do.
 	do
 	{
 		cout << "Please enter your choice (1-4): ";
@@ -273,7 +273,7 @@ int main()
 			}
 		}
 
-		//Allows the user to deposit money into an account.
+		// Allows the user to deposit money into an account.
 		else if (choice == 2)
 		{
 			cout << "Enter your account number: ";
@@ -305,7 +305,7 @@ int main()
 			}
 		}
 
-		//Displays all account numbers, names, and balances for each account.
+		// Displays all account numbers, names, and balances for each account.
 		else if (choice == 4)
 		{
 			Display(H);
@@ -317,7 +317,7 @@ int main()
 
 		cout << "\nCONTINUE (y/n)? ";
 		cin >> repeat;
-	} while (repeat == 'y'); //allows user to restart if wrong input is entered.
+	} while (repeat == 'y'); // Allows user to restart if wrong input is entered.
 
 	system("PAUSE");
 	return 0;
