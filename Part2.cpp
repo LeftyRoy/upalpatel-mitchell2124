@@ -1,3 +1,26 @@
+/*******************************************************
+ * Bank Accounts
+ *
+ * This project reads in a text file that includes
+ * one or more account numbers, the name of the
+ * person associated with that account, and the balance
+ * of the account. From the choices 1-4, the user is
+ * prompted to enter their choice. 
+ *
+ * '1' displays the balance of an individual.
+ * '2' deposits money into the existing account.
+ * '3' withdraws money from the existing account.
+ * '4' displays all existing accounts with their names
+ *     and balances.
+ *
+ *******************************************************/
+
+/**
+ * @file Part2.cpp
+ * @author Upal Patel
+ * @brief File contains implementaion of the functions of a Bank and its accounts.
+ */
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -12,6 +35,7 @@ struct node
 	float balance;
 	node *next;
 };
+
 int HashFun(int accNo);
 void insert(node *h[], int x, string y, float z);
 void Display(node *h[]);
@@ -21,10 +45,21 @@ string getName(node *h[], int num);
 float getBalance(node *h[], int num);
 bool search(node *h[], int x);
 
+/**
+ * @brief HashFun method
+ * @param accNo
+ * @details The method implements the modulus operator on the account number using the number 5.
+ */
 int HashFun(int accNo)
 {
 	return accNo % 5;
 }
+
+/**
+ * @brief insert method
+ * @param *h[] x y z
+ * @details 
+ */
 
 void insert(node *h[], int x, string y, float z)
 {
@@ -38,6 +73,11 @@ void insert(node *h[], int x, string y, float z)
 	h[i] = p;
 }
 
+/**
+ * @brief Display method
+ * @param *h[]
+ * @details
+ */
 void Display(node *h[])
 {
 	node *p;
@@ -54,6 +94,11 @@ void Display(node *h[])
 	}
 }
 
+/**
+ * @brief deposit method
+ * @param *h[] depAmt num
+ * @details
+ */
 float const deposit(node *h[], float depAmt, int num)
 {
 	int i = HashFun(num);
@@ -70,6 +115,12 @@ float const deposit(node *h[], float depAmt, int num)
 	return dep->balance;
 }
 
+
+/**
+ * @brief withdraw functions
+ * @param *h[] withAmt num
+ * @details
+ */
 float const withdraw(node *h[], float withAmt, int num)
 {
 	int i = HashFun(num);
@@ -86,6 +137,11 @@ float const withdraw(node *h[], float withAmt, int num)
 	return with->balance;
 }
 
+/**
+ * @brief getName method
+ * @param *h[] num
+ * @details
+ */
 string getName(node *h[], int num)
 {
 	int i = HashFun(num);
@@ -103,6 +159,11 @@ string getName(node *h[], int num)
 	return gName;
 }
 
+/**
+ * @brief getBalance method
+ * @param *h[] num
+ * @details
+ */
 float getBalance(node *h[], int num)
 {
 	int i = HashFun(num);
@@ -120,6 +181,11 @@ float getBalance(node *h[], int num)
 	return gBal;
 }
 
+/**
+ * @brief search method
+ * @param *h[] x
+ * @details
+ */
 bool search(node *h[], int x)
 {
 	int i = HashFun(x);
@@ -138,6 +204,10 @@ bool search(node *h[], int x)
 	}
 }
 
+/**
+ * @brief main method
+ * @details Execution starts here for the Bank Accounts executable.
+ */
 int main()
 {
 	node *H[5];
