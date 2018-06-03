@@ -242,10 +242,7 @@ int main()
 		H[i] = NULL;
 	}
 	
-	/** For each increment read in the account number, name, and balance.
-	 * Then it inserts them into the array and increase the length by one.
-	 * Repeats until all names are read in.
-	 */
+	// For each increment read in the account number, name, and balance. Then it inserts them into the array and increase the length by one. Repeats until all names are read in.
 	for (int i = 0; i < 6; i++)
 	{
 		f >> AcctNo[i] >> name[i] >> bal[i];
