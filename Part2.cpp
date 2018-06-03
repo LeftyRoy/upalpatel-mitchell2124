@@ -36,6 +36,11 @@ struct node
 	node *next;
 };
 
+/**
+ *
+ Function prototypes/declarations.
+ *
+*/
 int HashFun(int accNo);
 void insert(node *h[], int x, string y, float z);
 void Display(node *h[]);
